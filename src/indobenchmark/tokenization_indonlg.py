@@ -232,9 +232,6 @@ class IndoNLGTokenizer(PreTrainedTokenizer):
                 input_batch['labels'] = labels
                 
                 return input_batch
-
-    def __len__(self):
-        return max(self.special_ids_to_tokens) + 1
     
     def get_special_tokens_mask(
         self, token_ids_0: List[int], token_ids_1: Optional[List[int]] = None, already_has_special_tokens: bool = False
